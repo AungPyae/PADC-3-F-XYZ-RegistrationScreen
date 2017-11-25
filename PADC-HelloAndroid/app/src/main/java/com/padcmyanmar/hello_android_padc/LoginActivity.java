@@ -70,5 +70,14 @@ public class LoginActivity extends AppCompatActivity {
                 //Snackbar.make(v, "Login button clicked.", Snackbar.LENGTH_INDEFINITE).show();
             }
         });
+
+        btnToRegister = findViewById(R.id.btn_to_register);
+        btnToRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = RegisterActivity.newIntent(getApplicationContext());
+                startActivity(intent);
+            }
+        });
     }
 }
